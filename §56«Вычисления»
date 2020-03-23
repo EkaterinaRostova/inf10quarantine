@@ -1,0 +1,93 @@
+A.Частичное решение
+
+B. С++
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main()
+{
+double r, s, c;
+cin >> r;
+s = M_PI*r*r;
+c = 2*M_PI*r;
+cout<<fixed<<setprecision(3)<< s << "\n" << c << "\n";
+return 0;
+}
+
+C. C++
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main()
+{
+double a,b=10;
+cin >> a;
+cout<<fixed<<setprecision(3)<<pow(a,b);
+return 0;
+}
+
+D. C++
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d;
+    cin>>a;
+    b=a/100;
+    c=(a/10)%10;
+    d=a%10;
+    cout<<b<<' '<<c<<' '<<d;
+    return 0;
+}
+
+E. -
+
+F. C++
+#include <iostream>
+using namespace std;
+#include <math.h>
+#include<iomanip>
+int main()
+{
+    double a,b;
+    cin>>a>>b;
+    cout<<fixed<<setprecision(3)<<pow(a,b);
+    
+    return 0;
+}
+
+G. C++
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+int main ()
+{
+    int a,b,random_number;
+    cin>>a>>b;
+     srand(time(NULL));
+     for (int i = 0; i < 5; i++) {
+    random_number=a+rand() %(b - a);
+    cout<<random_number<<" ";
+     }
+    return 0;
+}
+
+H. C++(частичное решение)
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+int main ()
+{
+    float a,b,random_number;
+    cin>>a>>b;
+     srand(time(NULL));
+     for (int i = 0; i < 5; i++) {
+    random_number=a+rand() % int ( b-a); 
+    cout<<random_number<<" ";
+     }
+    return 0;
+}
