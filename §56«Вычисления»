@@ -1,4 +1,15 @@
-A.Частичное решение
+A.
+var a,b,f,d,c: integer;
+var e: real;
+begin
+read(a,b,c);
+f:=a+b+c;
+d:=a*b*c;
+e:=f/3;
+writeln(a,'+',b,'+',c,'=',f);
+writeln(a,'*',b,'*',c,'=',d);
+writeln('(',a,'+',b,'+',c,')/3=',e:3:3);
+end.
 
 B. С++
 #include <iostream>
