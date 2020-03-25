@@ -180,6 +180,7 @@ int main()
 }
 
 M. -
+
 N. PascalABC
 var n,a,k:integer;
 begin
@@ -195,4 +196,82 @@ else write('NO');
 end.
 
 ======================================================================================================
-ДАЛЬШЕ НЕ РЕШАЛ
+ДАЛЬШЕ НЕ РЕШАЛ (23.03.20)
+======================================================================================================
+
+O. ... S. -
+
+T. C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N,i,a=0,b=1;
+    cin>>N;
+    i=N;
+    while(i>0){
+        cin>>N;
+        a=a+N;
+        b=b*N;
+        i--;
+    }
+    cout<<a<<' '<<b;
+    return 0;
+}
+
+U. C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N,a=0,b=1;
+    while(true){
+        cin>>N;
+        if(N==0){
+            break;
+        }
+        a=a+N;
+        b=b*N;
+        
+    }
+    cout<<a<<' '<<b;
+    return 0;
+}
+
+V. C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N,mx,mn;
+    cin>>N;
+    mn=N;
+    mx=N;
+    while(true){
+        if(N==0){break;}
+        if(N>mx){mx=N;}
+        if(N<mn){mn=N;}
+        cin>>N;
+    }
+    cout<<mn<<' '<<mx;
+    return 0;
+}
+
+W. C++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N,i=1,a=1;
+    cin>>N;
+    while(i<=N){
+        a=a*i;
+        i++;
+    }
+    cout<<a;
+    return 0;
+}
