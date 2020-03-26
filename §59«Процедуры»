@@ -1,0 +1,226 @@
+A. C++
+#include <iostream>
+using namespace std;
+
+void line(int a){
+    int i=a;
+    for(i>0;i--;){
+        cout<<"-";
+    }
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    line(a);
+    return 0;
+}
+
+B. С++
+#include <iostream>
+using namespace std;
+
+void line(int a){
+    for (int i=0; i<a; i++){
+        for (int j=0; j<a; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    line(a);
+    return 0;
+}
+
+С. C++
+#include <iostream>
+using namespace std;
+
+void line(int a){
+    int i;
+    while(a>0){
+        i=a;
+        cout<<i%10<<"\n";
+        a=a/10;
+    }
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    line(a);
+    return 0;
+}
+
+D. C++
+#include <iostream>
+#include <cmath>
+using namespace std;
+ 
+int number_digits (int x)
+{
+    int result = 0;
+    while (x!=0)
+    {
+        result++;
+        x/=10;
+    }
+    return result;
+}
+ 
+int main()
+{
+    int N;
+    cin >> N;
+    int k = pow (10, number_digits(N) - 1);
+    while (k!=0)
+    {
+        cout << N/k%10 << endl;
+        k /= 10;
+    }
+    cout <<endl;
+}
+
+E. C++
+#include <iostream>
+using namespace std;
+
+void line(int a){
+    for(int i=1;i<=a;i++){
+        
+    
+        if(a%i==0){cout<<i<<" ";}
+}}
+
+int main()
+{
+    int a;
+    cin>>a;
+    line(a);
+    return 0;
+}
+
+F. C++
+#include <iostream>
+using namespace std;
+
+void line(int a){
+int M,C,X,V,I;
+M=a/1000;
+C=(a%1000)/100;
+X=((a%1000)%100)/10;
+I=a%10;
+while(M>0){cout<<"M";M--;}
+  if(C==1){cout<<"C";}
+if(C==2){cout<<"CC";}
+if(C==3){cout<<"CCC";} 
+if(C==4){cout<<"CD";} 
+if(C==5){cout<<"D";} 
+if(C==6){cout<<"DC";} 
+if(C==7){cout<<"DCC";} 
+if(C==8){cout<<"DCCC";} 
+if(C==9){cout<<"CM";}   
+  if(X==1){cout<<"X";}
+if(X==2){cout<<"XX";}
+if(X==3){cout<<"XXX";} 
+if(X==4){cout<<"XL";} 
+if(X==5){cout<<"L";} 
+if(X==6){cout<<"LI";} 
+if(X==7){cout<<"LII";} 
+if(X==8){cout<<"LIII";} 
+if(X==9){cout<<"IC";} 
+  if(I==1){cout<<"I";}
+if(I==2){cout<<"II";}
+if(I==3){cout<<"III";} 
+if(I==4){cout<<"IV";} 
+if(I==5){cout<<"V";} 
+if(I==6){cout<<"VI";} 
+if(I==7){cout<<"VII";} 
+if(I==8){cout<<"VIII";} 
+if(I==9){cout<<"IX";}    
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    line(a);
+    return 0;
+}
+
+G. Pyth
+def dec2oct(n):
+    m = ""
+    while n != 0:
+        m = str(n%8) + m
+        n //= 8
+    return "{0:0>10}".format(m)
+
+a = int(input())
+print(dec2oct(a))
+
+H. Pyth
+def dec2(n):
+    h, m = "", ""
+    while n != 0:
+        if n%16 == 15: h = "F"
+        elif n%16 == 14: h = "E"
+        elif n%16 == 13: h = "D"
+        elif n%16 == 12: h = "C"
+        elif n%16 == 11: h = "B"
+        elif n%16 == 10: h = "A"
+        else: h = str (n%16)
+        m = h + m
+        n //= 16
+    return "{0:0>4}".format(m)    
+a = int(input())
+print(dec2(a))
+
+I. Pyth
+def dec2oct(n):
+    m = ""
+    while n != 0:
+        m = str(n%2) + m
+        n //= 2
+    return format(m)
+
+a = int(input())
+print(dec2oct(a))
+
+J. Pyth
+def dec2oct(n):
+    m = ""
+    while n != 0:
+        m = str(n%8) + m
+        n //= 8
+    return format(m)
+
+a = int(input())
+print(dec2oct(a))
+
+K. - N. -
+
+O. C++
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int N,i,a=1,b=0,c;
+    cin>>N;
+    for(i=0;i<N;i++){
+        c=b+a;
+        a=b;
+        b=c;
+        cout<<c<<' ';
+    }
+    return 0;
+}
