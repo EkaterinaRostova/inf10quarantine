@@ -1,0 +1,211 @@
+all C++
+A. 
+#include <iostream>
+using namespace std;
+void mxmn(int a, int b, int c)
+{
+    int mx,mn;
+    if(a>b){mx=a;}else{mx=b;}
+    if(c>mx){mx=c;}
+    if(a<b){mn=a;}else{mn=b;}
+    if(c<mn){mn=c;}
+    cout<<mn;
+}
+
+int main()
+{
+    int a,b,c;
+    cin>>a>>b>>c;
+    mxmn(a,b,c);
+    return 0;
+}
+
+B.
+#include <iomanip>
+#include <iostream>
+using namespace std;
+void mxmn(double a, double b, double c, double d, double e)
+{
+    double mx,mn,o;
+    double f;
+    if (a>b){mx=a;}else{mx=b;}
+    if (c>mx){mx=c;}
+    if (d>mx){mx=d;}
+    if (e>mx){mx=e;}
+    if (a<b){mn=a;}else{mn=b;}
+    if (c<mn){mn=c;}
+    if (d<mn){mn=d;}
+    if (e<mn){mn=e;}
+    o=a+b+c+d+e-mx-mn;
+    f=o/3;
+    cout<<mn<<" "<<mx<<endl;
+    cout<<fixed<<setprecision(2)<<f;
+}
+
+int main()
+{
+    double a,b,c,d,e;
+    cin>>a>>b>>c>>d>>e;
+    mxmn(a,b,c,d,e);
+    return 0;
+}
+
+C.
+#include <iomanip>
+#include <iostream>
+using namespace std;
+void mxmn(int a)
+{
+    int i=0;
+    while(a>0){
+        i++;
+        a=a/10;
+    }
+    cout<<i;
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    mxmn(a);
+    return 0;
+}
+
+D.
+#include <iomanip>
+#include <iostream>
+using namespace std;
+void mxmn(int a, int b)
+{
+    int i=1,c,nod;
+    if(a>b){c=a;}else{c=b;}
+    while(i<=c){
+        if((a%i)==0 && (b%i)==0){nod=i;}
+        i++;
+    }
+    cout<<nod;
+}
+
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    mxmn(a,b);
+    return 0;
+}
+
+E.
+#include <iomanip>
+#include <iostream>
+using namespace std;
+void mxmn(int a, int b)
+{
+    int i=1,c,nok;
+    nok=a*b;
+    while(a>0 && b>0){
+        if(a>b){a=a%b;}else{b=b%a;}
+    }
+    cout<<nok/(a+b);
+}
+
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    mxmn(a,b);
+    return 0;
+}
+
+F.
+#include <iomanip>
+#include <iostream>
+using namespace std;
+void mxmn(int a)
+{
+    while(a>0){
+        cout<<a%10;
+        a=a/10;
+    }
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    mxmn(a);
+    return 0;
+}
+
+G.
+#include <iomanip>
+#include <iostream>
+using namespace std;
+void mxmn(int a)
+{
+    int i,f=1,b=0,c;
+    for(i=0;i<a;i++){
+        c=b+f;
+        f=b;
+        b=c;
+    }
+    cout<<c;
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    mxmn(a);
+    return 0;
+}
+
+H. PascalABC
+function dividers(x: integer): integer;
+var s, i: integer;
+begin
+  s := 0;
+  for i := 1 to x - 1 do
+    if x mod i = 0 then
+      s := s + i;
+  dividers := s
+end;
+ 
+var 
+  a, b: integer;
+  
+begin
+Read(a, b);
+  if (dividers(a) = b) and (dividers(b) = a) then
+    WriteLn('YES')
+  else
+    WriteLn('NO');
+  ReadLn
+end.
+
+I. -
+
+J. -
+
+K. 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+bool perfect_number(int n)
+{
+ int res = 1;
+ for (int i = 2; i * i <= n; ++i)
+ if (n % i == 0)
+ res += i + n / i;
+ return res == n?1:0;
+}
+
+int main()
+{
+ int n;
+ cin >> n;
+ if(perfect_number(n)==true){cout<<"YES";}else{cout<<"NO";}
+}
+
+L. - M. -
