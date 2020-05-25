@@ -1,0 +1,104 @@
+1. C++
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int A,n,i=0;
+    cin>>A>>n;
+    if(A==0 || n==0){
+        return 0;
+    }
+    if(abs(A)<abs(n)){
+        i=1;
+    }
+    if(n>0){
+        i=i+A+n;
+    }
+    if(n<0){
+        i=i+A-abs(n);
+    }
+    cout<<i;
+    return 0;
+}
+
+2.py3
+a = int(input()) - 1
+b = int(input()) - 1
+c = int(input()) - 1
+t = 0
+
+while a > 0 and b > 0 and c > 0:
+    t += 1
+    if t % 2 == 1:
+        b -= 1
+    elif t % 4 == 2:
+        a-=1
+    elif t % 4 == 0:
+        c -= 1
+    if a == 0 or c == 0:
+        t = t + 6
+    elif b == 0:
+        t = t + 4
+print(t)
+
+3. ---
+
+4. py3
+Var
+ ar:array of byte;
+ i,j,resi,resk,n,k,min:integer;
+b:boolean;
+begin
+b:=false;
+readln(n);
+min:=n+10;
+setlength(ar,n+1);
+for i:=1 to n do
+ readln(ar[i]);
+for i:=1 to n-2 do
+ begin
+ for j:=i+1 to n-1 do
+ if ar[i]<ar[j] then
+ begin
+ for k:=j+1 to n do
+ if ar[j]>ar[k] then
+ begin
+ b:=true;
+ if min>k-i then
+ begin
+ resi:=i;
+resk:=k;
+ min:=k-i;
+ end;
+ end;
+ end;
+end;
+if b then write(resi,' ',resk) else write('0');
+end.
+
+5.py3
+a = int(input())
+
+b = int(input())
+
+lista = []
+
+count = 0
+
+for i in range(b - a + 1):
+
+        lista.append(a)
+
+        a = a + 1
+
+        for i in range(len(lista)):
+
+            result = (sum(map(int,str(lista[i]))))
+
+        if not(result % 2 == 0):
+
+            count = count + 1
+
+print(count)
